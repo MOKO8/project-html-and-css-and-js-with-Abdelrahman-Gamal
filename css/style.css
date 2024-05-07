@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+*{
+  font-family: "Ubuntu Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+body {
+  background-image: linear-gradient(to right, #01022d, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container{
+  background-image:  linear-gradient(to right, #01022de5 10%, #00000088) ;
+  width: 95%;
+  height: 800px;
+  /* background-position: center, 100%; */
+  position: relative;
+}
+.img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.container:hover {
+  background-image: linear-gradient(to right, #01022dda 10%, transparent) ;
+}
+@media (max-width: 1700px) {
+  .img {
+    display: none;
+  }
+  .container {
+  background-image:  linear-gradient(to right, #01022de5 10%, #00000088), url(../imgs/supra_hero.jpg) ;
+
+  background-position: center ;
+  background-repeat: no-repeat;
+  }
+  .container:hover {
+  background-image:  linear-gradient(to right, #01022dda 10%, transparent), url(../imgs/supra_hero.jpg) ;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 10px;
+}
+.logo {
+  font-size: 35px;
+  padding: 5px;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul a {
+  border-bottom: solid 2px transparent;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+ul a:hover {
+  border-bottom: solid 2px white;
+}
+.content {
+  color: white;
+  margin-top: 50px;
+  padding: 30px;
+}
+.content h2 {
+  font-size: 70px;
+  text-transform: uppercase;
+}
+.content p {
+  letter-spacing: 3px;
+  padding: 20px 0;
+}
+.content button {
+  font-size: 30px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  cursor: pointer;
+  transition: .5s;
+}
+.content button:hover {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.model {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.644);
+  padding: 20px;
+  border-radius: 15px;
+  width: 290px;
+  text-align: center;
+  transition: .5s;
+  top: -200px;
+}
+.model-down {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.model h4 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.model .colors {
+  display: flex;
+  justify-content: space-between;
+}
+.model .colors .squer {
+  width: 50px ;
+  height: 50px;
+  background-color: aqua;
+  cursor: pointer ;
+  border-radius: 15px;
+  transition: .3s;
+}
+.model .colors .squer:hover {
+  scale: .9;
+}
+.model .colors .red {
+  background-color: red;
+}
+.container-bacakground-red {
+  background-image:  linear-gradient(to right, #9e2e2ee5 5%, #00000088), url(../imgs/supra_hero.jpg) ;
+}
+.container-bacakground-red:hover {
+  background-image:  linear-gradient(to right, #9e2e2ee5 5%, transparent), url(../imgs/supra_hero.jpg) ;
+}
+.model .colors .green {
+  background-color: green;
+}
+.container-bacakground-green {
+  background-image:  linear-gradient(to right, #316e15ea 5%, #00000088), url(../imgs/supra_hero.jpg) ;
+}
+.container-bacakground-green:hover {
+  background-image:  linear-gradient(to right, #316e15ea 5%, transparent), url(../imgs/supra_hero.jpg) ;
+}
+.model .colors .yellow {
+  background-color: yellow;
+}
+.container-bacakground-yellow {
+  background-image:  linear-gradient(to right, #8c731f 5%, #00000088), url(../imgs/supra_hero.jpg) ;
+}
+.container-bacakground-yellow:hover {
+  background-image:  linear-gradient(to right, #8c731f 5%, transparent), url(../imgs/supra_hero.jpg) ;
+}
+.model .colors .black {
+  background-color: black;
+}
+.model .colors .orange {
+  background-color: orange;
+}
+.container-bacakground-orange {
+  background-image:  linear-gradient(to right, #ffa600a1 10%, #00000088), url(../imgs/supra_hero.jpg) ;
+}
+.container-bacakground-orange:hover {
+  background-image:  linear-gradient(to right, #ffa600a1 10%, transparent), url(../imgs/supra_hero.jpg) ;
+}
+
+.model span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  padding: 20px;
+}
+.model span:hover {
+  scale: .9;
+}
+@media (max-width: 750px) {
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+  ul a{
+    padding: 10px;
+  }
+  .content button {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+  .content {
+    text-align: center;
+  }
+  .model-down {
+    top: 700px;
+  }
+  .model {
+    width: 280px;
+  }
+}
+@media (min-width: 750px) {
+  .content {
+    width: 50%;
+  }
+  .content p {
+    max-width: 350px;
+  }
+}
